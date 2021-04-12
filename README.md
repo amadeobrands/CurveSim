@@ -13,8 +13,10 @@ To approximate realistic market conditions, we initiate the pool with the curren
 For example, to simulate 3pool with a range of A values, we use:
 
 ```python
-D = int(856681803.23*10**18) #10**18 precision
+import CurveSim
+
 coins = ['DAI','USDC','USDT']
+D = int(856681803.23*10**18) #10**18 precision
 quote = 'USD'
 A_list = 'stable' #Default A range for stablecoins, 2**(np.array(range(11,25))/2)
 vol_mult = .45
