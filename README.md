@@ -19,7 +19,7 @@ quote = 'USD'
 A_list = 'stable' #Default A range for stablecoins, 2**(np.array(range(11,25))/2)
 vol_mult = .45
 
-ar, bal, volatility, pool_value, slippage_cost, log_returns, log_returns_hold, err = CurveSim5.Asim(D, coins, quote, A_list=A_list, vol_mult=vol_mult, plot=True)
+ar, bal, volatility, pool_value, slippage_cost, log_returns, log_returns_hold, err = CurveSim.Asim(D, coins, quote, A_list=A_list, vol_mult=vol_mult, plot=True)
 ```
 
 To simulate 3pool with a range of A values and fees (caution, may run for a long time), we use:
@@ -31,7 +31,7 @@ A_list = 'stable'
 fee_list = np.linspace(.0001,.001,10)*10**10 #10**10 precision
 vol_mult = .45
 
-ar, bal, volatility, pool_value, slippage_cost, log_returns, log_returns_hold, err = CurveSim5.Asim(D, coins, quote, A_list=A_list, fee_list=fee_list, vol_mult=vol_mult, plot=True)
+ar, bal, volatility, pool_value, slippage_cost, log_returns, log_returns_hold, err = CurveSim.Asim(D, coins, quote, A_list=A_list, fee_list=fee_list, vol_mult=vol_mult, plot=True)
 ```
 
 ## Getting Data:
