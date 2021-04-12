@@ -327,7 +327,7 @@ def sim(A, D, n, prices, volumes, fee=4*10**6, vol_mult=1, quotes=None):
     Simulates a pool with parameters A, D, n, and (optionally) fee, given time series of prices and volumes
     Optarbs is called for each timepoint
     
-    fee: fee with precision 10**18. Default fee is .0004 (.04%)
+    fee: fee with precision 10**10. Default fee is .0004 (.04%)
     vol_mult: scalar multiplied by volume at each timepoint
     quotes: time series of the values of each coin in units of some quote currency (e.g., USD); used to estimate pool value over time.
 
@@ -373,7 +373,7 @@ def Asim(D, coins, quote, arbroute=None, A_list=None, fee_list=[4*10**6], vol_mu
     quote: if string, name of quote currency to load (e.g., 'USD'); if int, pool value quoted in coins[int] 
     arbroute: determine pairwise coin prices using a third currency (e.g., ETH-SUSD/SETH-SUSD, instead of ETH-SETH)
     A_list: list of A_values; input 'crypto' or 'stable' for default values
-    fee_list: list of fees with precision 10**18. Default fee is .0004 (.04%)
+    fee_list: list of fees with precision 10**10. Default fee is .0004 (.04%)
     vol_mult: scalar multiplied by volume at each timepoint
     t_start/t_end: used to truncate input time series
     resample: used to downsample input time series
